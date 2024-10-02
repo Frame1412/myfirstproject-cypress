@@ -11,7 +11,7 @@ describe('Shopee login Process', () => {
     const decodedPassword = Buffer.from(encodedPassword, 'base64').toString('utf8');
 
     // ดึงค่า username จาก environment variable
-    const username = Cypress.env('USERNAME');
+    const username = Cypress.env('USERNAME'); 
 
     // ใช้ locators จากไฟล์ locators.js และกรอกข้อมูล login
     cy.get(locator.loginpage.username).type(username);
